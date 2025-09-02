@@ -27,7 +27,8 @@ class CreateNotification extends Page implements HasForms
                 Textarea::make('message')
                     ->label(__('Message'))
                     ->required()
-                    ->maxLength(160),
+                    ->maxLength(160)
+                    ->helperText('After you send the notification, go to filament-v4 branch and send the message again to see the difference'),
             ])
             ->statePath('data');
     }
